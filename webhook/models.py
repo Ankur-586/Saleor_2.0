@@ -1,8 +1,8 @@
 from django.db import models
 
-from ..app.models import App
-from ..app.validators import AppURLValidator
-from ..core.utils.json_serializer import CustomJsonEncoder
+from app.models import App
+from app.validators import AppURLValidator
+from core.utils.json_serializer import CustomJsonEncoder
 from .validators import custom_headers_validator
 
 

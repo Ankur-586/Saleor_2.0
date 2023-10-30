@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,13 +38,23 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # extra added apps
+    'django.contrib.sites',
+    # Made By owner
     'account',
     'app',
     'core',
     'permission',
     'webhook',
-
+    'order',
+    'channel',
+    'discount',
+    'giftcard',
+    'payment',
+    'shipping',
+    
     # External apps
+    'django_measurement',
     'django_countries',
     'phonenumber_field',
 ]
@@ -130,3 +141,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DEFAULT_COUNTRY = os.environ.get("DEFAULT_COUNTRY", "US")
+DEFAULT_DECIMAL_PLACES = 3
+DEFAULT_MAX_DIGITS = 12
+DEFAULT_CURRENCY_CODE_LENGTH = 3

@@ -15,13 +15,13 @@ from django.utils.crypto import get_random_string
 from django_countries.fields import Country, CountryField
 from phonenumber_field.modelfields import PhoneNumber, PhoneNumberField
 
-from ..app.models import App
-from ..core.models import ModelWithExternalReference, ModelWithMetadata
-from ..core.utils.json_serializer import CustomJsonEncoder
-from ..order.models import Order
-from ..permission.enums import AccountPermissions, BasePermissionEnum, get_permissions
-from ..permission.models import Permission, PermissionsMixin, _user_has_perm
-from ..site.models import SiteSettings
+from app.models import App
+from core.models import ModelWithExternalReference, ModelWithMetadata
+from core.utils.json_serializer import CustomJsonEncoder
+from order.models import Order
+from permission.enums import AccountPermissions, BasePermissionEnum, get_permissions
+from permission.models import Permission, PermissionsMixin, _user_has_perm
+from site.models import SiteSettings
 from . import CustomerEvents
 from .validators import validate_possible_number
 

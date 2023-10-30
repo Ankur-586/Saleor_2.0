@@ -1,6 +1,6 @@
 from typing import Any, Optional
 
-from ..permission.enums import (
+from permission.enums import (
     AccountPermissions,
     AppPermission,
     BasePermissionEnum,
